@@ -7,8 +7,7 @@ import { useAuth } from "../context/auth";
 export default function Landing() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [errors, setErrors] = useState({});
-	const { login, errors: authErrors } = useAuth();
+	const { login } = useAuth();
 	const history = useHistory();
 
 	const handleLogin = async (event) => {

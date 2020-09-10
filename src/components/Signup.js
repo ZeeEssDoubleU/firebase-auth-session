@@ -8,12 +8,12 @@ export default function Landing() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
-	const [errors, setErrors] = useState({});
+	const [setErrors] = useState({});
 	const { register, errors: authErrors } = useAuth();
 
 	useEffect(() => {
 		if (authErrors) setErrors(authErrors);
-	}, [authErrors]);
+	}, [setErrors, authErrors]);
 
 	const handleRegister = (event) => {
 		event.preventDefault();
@@ -69,7 +69,7 @@ const Form = styled.form`
 	display: grid;
 `;
 const Input = styled.input`
-	margin: 0 0 1em 0;
+	margin: 0 0 1rem 0;
 	height: 2em;
 	width: 18em;
 `;
